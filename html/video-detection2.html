@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Detection App</title>
+    <link rel="stylesheet" href="../css/style 2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Detection: Real or Deepfake?</h1>
+
+        <div id="video-container">
+            <video id="current-video" controls></video>
+        </div>
+
+        <div id="feedback-container">
+            <button id="real-button">Real</button>
+            <button id="fake-button">Deepfake</button>
+            <button id="next-button" style="display: none;">Next Video</button> <!-- Hidden initially -->
+        </div>
+
+        <p id="feedback"></p>
+        
+        <!-- New elements for explanation and image -->
+        <img id="explanation-image" src="" alt="Explanation" style="display: block; margin-top: 10px; width: 300px; height: auto;"/>
+        <p id="explanation" style="margin-top: 10px;"></p>
+        
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script src="../js/script-video2.js"></script>
+</body>
+</html>

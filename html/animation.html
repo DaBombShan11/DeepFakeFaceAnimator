@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Swap Application</title>
+    <link rel="stylesheet" href="../css/animation.css">
+</head>
+<body>
+    <h1>Face Swap Application</h1>
+    <video id="video" autoplay></video>
+    <button id="capture-button">Capture Image</button>
+    <canvas id="canvas" style="display: none;"></canvas>
+    
+    <h2>Select a Face to Swap</h2>
+    <div id="face-selection">
+        <img src="../images/beyonce-swap.webp" alt="Face 1" class="face-option">
+        <img src="../images/leonardo-swap.webp" alt="Face 2" class="face-option">
+        <img src="../images/denzel-swap.jpg" alt="Face 3" class="face-option">
+        <img src="../images/rihanna-swap.jpeg" alt="Face 4" class="face-option">
+        <img src="../images/zendaya-swap.jpeg" alt="Face 5" class="face-option">
+    </div>
+    <button id="swap-button" disabled>Swap Faces</button>
+    
+    <div>
+        <h2>Captured Image</h2>
+        <div id="image-container"> <!-- Container for alignment -->
+            <img id="captured-image" alt="Captured Image" style="display: none;">
+            <span class="arrow">&#8594;</span> <!-- Arrow between images -->
+            <h2 style="margin: 0;">Swapped Image</h2> <!-- No margin for alignment -->
+            <img id="swapped-image" alt="Swapped Image" style="display: none;">
+        </div>
+    </div>
+
+    <nav class="buttons">
+        <a href="image-tutorial.html" class="button"> Learn About Detecting Deep Fake Images</a>
+    </nav>
+    
+    <script src="../js/animation.js"></script>
+</body>
+</html>
