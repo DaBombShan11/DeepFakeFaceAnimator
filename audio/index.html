@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Guess Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #f06, #4a90e2);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .content {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: auto;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .audio-control {
+            margin: 20px 0;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .real-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .fake-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        .real-btn:hover {
+            background-color: #45a049;
+        }
+        .fake-btn:hover {
+            background-color: #d32f2f;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deepfake Guess Game</h1>
+    </header>
+    <div class="content">
+        <p>Listen to the audio below and guess: is it real or fake?</p>
+        <div class="audio-control">
+            <audio controls>
+                <source src="DonaldTrumpDeepfake.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="button-container">
+            <button class="real-btn" onclick="alert('You guessed Real!');">Real</button>
+            <button class="fake-btn" onclick="alert('You guessed Fake!');">Fake</button>
+        </div>
+    </div>
+    <footer>
+        <p>Deepfake Guess Game - Made for Fun</p>
+    </footer>
+</body>
+</html>
+
+<audio controls>
+    <source src="DonaldTrumpDeepfake.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
 
