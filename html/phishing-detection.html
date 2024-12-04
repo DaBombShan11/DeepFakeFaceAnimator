@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Detection App</title>
-    <link rel="stylesheet" href=".../style 2.css">
-    <style>
-        #progress-bar-container {
-            margin-top: 20px;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Image Detection App</title>
+   <link rel="stylesheet" href="../style 2.css">
+   <style>
+       #progress-bar-container {
+           margin-top: 20px;
+       }
 
-        #progress-bar {
-            width: 100%;
-            height: 15px;
-            background-color: #f3f3f3;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-        }
 
-        #progress-bar-fill {
-            height: 100%;
-            background-color: #4caf50;
-            width: 0%;
-        }
-    </style>
+       #progress-bar {
+           width: 100%;
+           height: 15px;
+           background-color: #f3f3f3;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           overflow: hidden;
+       }
+
+
+       #progress-bar-fill {
+           height: 100%;
+           background-color: #4caf50;
+           width: 0%;
+       }
+   </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Step 1: Image and Guess Window -->
-        <div id="image-window" class="window">
-            <h1>Phishing Detection: Real or Fake?</h1>
-            <div id="image-container">
-                <!-- Display the image here -->
-                <img id="current-image" src="" alt="Current Image" style="width: 100%; height: auto;"/>
-            </div>
-            <div id="feedback-container">
-                <button id="real-button">Real</button>
-                <button id="fake-button">Fake</button>
-            </div>
-            <p id="feedback"></p>
-            <button id="show-explanation-button" style="display: none;">Show Explanation</button>
-        </div>
+   <div class="container">
+       <!-- Step 1: Image and Guess Window -->
+       <div id="image-window" class="window">
+           <h1>Phishing Detection: Real or Fake?</h1>
+           <div id="image-container">
+               <!-- Display the image here -->
+               <img id="current-image" src="" alt="Current Image" style="width: 100%; height: auto;"/>
+           </div>
+           <div id="feedback-container">
+               <button id="real-button">Real</button>
+               <button id="fake-button">Fake</button>
+           </div>
+           <p id="feedback"></p>
+           <button id="show-explanation-button" style="display: none;">Show Explanation</button>
+       </div>
 
-        <!-- Step 2: Explanation Window (hidden initially) -->
-        <div id="explanation-window" class="window" style="display: none;">
-            <h2>Explanation</h2>
-            <img id="explanation-image" src="" alt="Explanation" style="width: 300px; height: auto;"/>
-            <p id="explanation-text"></p>
-            <button id="next-button">Next Image</button>
-        </div>
 
-        <!-- Final Result Window (hidden initially) -->
-        <div id="result-window" class="window" style="display: none;">
-            <h2 id="result-message"></h2>
-            <button id="learn-more-button" style="display:none;" onclick="window.location.href='video-detection3.html';">
-                Learn More About Deep Fake Videos
-            </button>
-            <button id="restart-button">Restart</button>
-        </div>
+       <!-- Step 2: Explanation Window (hidden initially) -->
+       <div id="explanation-window" class="window" style="display: none;">
+           <h2>Explanation</h2>
+           <img id="explanation-image" src="" alt="Explanation" style="width: 300px; height: auto;"/>
+           <p id="explanation-text"></p>
+           <button id="next-button">Next Image</button>
+       </div>
 
-        <!-- Progress Bar -->
+
+       <!-- Final Result Window (hidden initially) -->
+       <div id="result-window" class="window" style="display: none;">
+           <h2 id="result-message"></h2>
+           <!--<button id="congratsButton" style="display:none;" onclick="window.location.href='congratulations.html'">Go to Congratulations Page</button>
+           <button id="restart-button">Restart</button>-->
+       </div>
+
+
        <!-- Progress Bar -->
-        <div id="progress-bar-container">
-            <div id="progress-bar">
-                <div id="progress-bar-fill" style="width: 14.28%;"></div> <!-- Set statically to 2/7 -->
-            </div>
-            <p id="progress-text">Progress: 1/7</p>
-        </div>
+      <!-- Progress Bar -->
+       <div id="progress-bar-container">
+           <div id="progress-bar">
+               <div id="progress-bar-fill" style="width: 14.28%;"></div> <!-- Set statically to 2/7 -->
+           </div>
+           <p id="progress-text">Progress: 1/7</p>
+       </div>
+   </div>
 
+
+   <script src="../script-phishing.js"></script>
+</body>
+</html>
 
     </div>
 
